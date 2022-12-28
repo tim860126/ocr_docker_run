@@ -1,0 +1,23 @@
+services:
+  flask:
+    build: ./ocr_flask
+    container_name: template_flask
+    # restart: always
+    environment:
+      - APP_NAME=FlaskApp
+    expose:
+      - 8080
+
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - "/home/nginx:/var/log/nginx"
+    container_name: template_nginx
+    # restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+
+    depends_on:
+      - flask

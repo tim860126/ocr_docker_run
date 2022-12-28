@@ -1,0 +1,3 @@
+[submodule "ocr_flask"]
+	path = ocr_flask
+	url = https://github.com/tim860126/ocr_flask
