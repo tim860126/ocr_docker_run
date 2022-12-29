@@ -2,8 +2,8 @@ services:
   flask:
     build: ./ocr_flask
     container_name: template_flask
-    volumes:
-      - "/home/ocr_docker_run/ocr_flask:/app"
+    #volumes:
+    #  - "/home/ocr_docker_run/ocr_flask:/app"
     # restart: always
     environment:
       - APP_NAME=FlaskApp
